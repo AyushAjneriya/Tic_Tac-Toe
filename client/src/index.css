@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --card: 222 47% 7%;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 199 89% 48%; /* Sky Blue Neon */
+    --primary-foreground: 224 71% 4%;
+
+    --secondary: 262 83% 58%; /* Violet Neon */
+    --secondary-foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 66.9%;
+
+    --accent: 316 73% 52%; /* Pink Accent */
+    --accent-foreground: 213 31% 91%;
+
+    --border: 217.2 32.6% 17.5%;
+    --radius: 1rem;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
+/* Custom premium ambient lighting classes */
+.ambient-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-cyan {
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
+  top: -10%;
+  left: -10%;
+}
+
+.glow-purple {
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
+  bottom: -10%;
+  right: -10%;
+}
+
+/* Glassmorphism card utility */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Neon Text Glows */
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.5), 0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5), 0 0 20px rgba(168, 85, 247, 0.2);
+}
+
+.text-glow-pink {
+  text-shadow: 0 0 10px rgba(236, 72, 153, 0.5), 0 0 20px rgba(236, 72, 153, 0.2);
+}
