@@ -37,7 +37,7 @@ export default function App() {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/move', {
+      const response = await fetch('/api/move', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
